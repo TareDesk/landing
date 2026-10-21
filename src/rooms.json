@@ -1,0 +1,677 @@
+{
+ "m13": {
+  "room": "Family room",
+  "w": 1600,
+  "h": 1067,
+  "items": [
+   {
+    "name": "TV, 65 in",
+    "cu": 12,
+    "lb": 84,
+    "dots": [
+     [
+      48,
+      45
+     ]
+    ],
+    "label": [
+     48,
+     32
+    ]
+   },
+   {
+    "name": "Soundbar",
+    "cu": 2,
+    "lb": 14,
+    "dots": [
+     [
+      48,
+      55
+     ]
+    ],
+    "label": [
+     48,
+     62
+    ]
+   },
+   {
+    "name": "Book boxes ×10",
+    "cu": 15,
+    "lb": 400,
+    "dots": [
+     [
+      30,
+      48
+     ],
+     [
+      70,
+      52
+     ]
+    ],
+    "label": [
+     14,
+     45
+    ]
+   },
+   {
+    "name": "Sofa",
+    "cu": 40,
+    "lb": 280,
+    "dots": [
+     [
+      20,
+      80
+     ]
+    ],
+    "label": [
+     18,
+     91
+    ]
+   },
+   {
+    "name": "Armchair",
+    "cu": 15,
+    "lb": 105,
+    "dots": [
+     [
+      76,
+      72
+     ]
+    ],
+    "label": [
+     80,
+     62
+    ]
+   },
+   {
+    "name": "Round coffee table",
+    "cu": 12,
+    "lb": 84,
+    "dots": [
+     [
+      62,
+      88
+     ]
+    ],
+    "label": [
+     42,
+     80
+    ]
+   },
+   {
+    "name": "Rattan ottoman",
+    "cu": 5,
+    "lb": 35,
+    "dots": [
+     [
+      83,
+      82
+     ]
+    ],
+    "label": [
+     89,
+     74
+    ]
+   }
+  ]
+ },
+ "m03": {
+  "room": "Living room",
+  "w": 1600,
+  "h": 1067,
+  "items": [
+   {
+    "name": "Leather loveseat",
+    "cu": 35,
+    "lb": 245,
+    "dots": [
+     [
+      25,
+      52
+     ]
+    ],
+    "label": [
+     22,
+     33
+    ]
+   },
+   {
+    "name": "Hanging chair",
+    "cu": 8,
+    "lb": 40,
+    "dots": [
+     [
+      70,
+      40
+     ]
+    ],
+    "label": [
+     76,
+     20
+    ]
+   },
+   {
+    "name": "Large plants ×6",
+    "cu": 30,
+    "lb": 180,
+    "dots": [
+     [
+      40,
+      30
+     ],
+     [
+      52,
+      52
+     ]
+    ],
+    "label": [
+     36,
+     22
+    ]
+   },
+   {
+    "name": "Plant stand",
+    "cu": 4,
+    "lb": 28,
+    "dots": [
+     [
+      75,
+      60
+     ]
+    ],
+    "label": [
+     88,
+     50
+    ]
+   },
+   {
+    "name": "Dining chair ×2",
+    "cu": 10,
+    "lb": 70,
+    "dots": [
+     [
+      5,
+      60
+     ],
+     [
+      8,
+      82
+     ]
+    ],
+    "label": [
+     16,
+     68
+    ]
+   },
+   {
+    "name": "Area rug ×2",
+    "cu": 6,
+    "lb": 42,
+    "dots": [
+     [
+      40,
+      75
+     ],
+     [
+      65,
+      72
+     ]
+    ],
+    "label": [
+     80,
+     82
+    ]
+   },
+   {
+    "name": "Jute pouf ×2",
+    "cu": 6,
+    "lb": 30,
+    "dots": [
+     [
+      55,
+      85
+     ]
+    ],
+    "label": [
+     55,
+     95
+    ]
+   }
+  ]
+ },
+ "m14": {
+  "room": "Dining room",
+  "w": 1600,
+  "h": 1067,
+  "items": [
+   {
+    "name": "Shelving unit, 8 ft",
+    "cu": 40,
+    "lb": 280,
+    "dots": [
+     [
+      60,
+      20
+     ]
+    ],
+    "label": [
+     46,
+     5
+    ]
+   },
+   {
+    "name": "Book boxes ×8",
+    "cu": 12,
+    "lb": 320,
+    "dots": [
+     [
+      46,
+      44
+     ],
+     [
+      77,
+      44
+     ],
+     [
+      43,
+      60
+     ]
+    ],
+    "label": [
+     66,
+     52
+    ]
+   },
+   {
+    "name": "Boombox ×2",
+    "cu": 2,
+    "lb": 14,
+    "dots": [
+     [
+      22,
+      45
+     ],
+     [
+      34,
+      45
+     ]
+    ],
+    "label": [
+     24,
+     34
+    ]
+   },
+   {
+    "name": "Dish pack (fragile)",
+    "cu": 5,
+    "lb": 40,
+    "dots": [
+     [
+      66,
+      40
+     ],
+     [
+      64,
+      85
+     ]
+    ],
+    "label": [
+     60,
+     72
+    ]
+   },
+   {
+    "name": "Dining table",
+    "cu": 20,
+    "lb": 140,
+    "dots": [
+     [
+      30,
+      64
+     ]
+    ],
+    "label": [
+     28,
+     77
+    ]
+   },
+   {
+    "name": "Dining chair ×2",
+    "cu": 10,
+    "lb": 70,
+    "dots": [
+     [
+      12,
+      72
+     ],
+     [
+      30,
+      80
+     ]
+    ],
+    "label": [
+     14,
+     90
+    ]
+   },
+   {
+    "name": "Pedestal fan",
+    "cu": 3,
+    "lb": 21,
+    "dots": [
+     [
+      83,
+      55
+     ]
+    ],
+    "label": [
+     80,
+     94
+    ]
+   },
+   {
+    "name": "Mini fridge",
+    "cu": 12,
+    "lb": 84,
+    "dots": [
+     [
+      95,
+      60
+     ]
+    ],
+    "label": [
+     90,
+     76
+    ]
+   }
+  ]
+ },
+ "m08": {
+  "room": "Living room",
+  "w": 1600,
+  "h": 1067,
+  "items": [
+   {
+    "name": "Sofa, 3-seat",
+    "cu": 35,
+    "lb": 245,
+    "dots": [
+     [
+      56,
+      60
+     ]
+    ],
+    "label": [
+     58,
+     50
+    ]
+   },
+   {
+    "name": "Framed art ×4",
+    "cu": 8,
+    "lb": 56,
+    "dots": [
+     [
+      54,
+      42
+     ]
+    ],
+    "label": [
+     55,
+     33
+    ]
+   },
+   {
+    "name": "Table lamp",
+    "cu": 2,
+    "lb": 14,
+    "dots": [
+     [
+      40,
+      54
+     ]
+    ],
+    "label": [
+     32,
+     44
+    ]
+   },
+   {
+    "name": "TV, 50 in",
+    "cu": 8,
+    "lb": 56,
+    "dots": [
+     [
+      77,
+      55
+     ]
+    ],
+    "label": [
+     84,
+     46
+    ]
+   },
+   {
+    "name": "TV stand",
+    "cu": 10,
+    "lb": 70,
+    "dots": [
+     [
+      75,
+      64
+     ]
+    ],
+    "label": [
+     87,
+     60
+    ]
+   },
+   {
+    "name": "Ottoman",
+    "cu": 10,
+    "lb": 70,
+    "dots": [
+     [
+      60,
+      74
+     ]
+    ],
+    "label": [
+     70,
+     83
+    ]
+   },
+   {
+    "name": "Desk",
+    "cu": 15,
+    "lb": 105,
+    "dots": [
+     [
+      40,
+      78
+     ]
+    ],
+    "label": [
+     28,
+     88
+    ]
+   },
+   {
+    "name": "Desk chair",
+    "cu": 6,
+    "lb": 42,
+    "dots": [
+     [
+      47,
+      74
+     ]
+    ],
+    "label": [
+     53,
+     94
+    ]
+   },
+   {
+    "name": "Typewriter",
+    "cu": 2,
+    "lb": 20,
+    "dots": [
+     [
+      25,
+      78
+     ]
+    ],
+    "label": [
+     12,
+     70
+    ]
+   }
+  ]
+ },
+ "c01": {
+  "room": "Bedroom",
+  "w": 1600,
+  "h": 1600,
+  "items": [
+   {
+    "name": "Full bed",
+    "cu": 50,
+    "lb": 350,
+    "dots": [
+     [
+      12,
+      65
+     ]
+    ],
+    "label": [
+     13,
+     79
+    ]
+   },
+   {
+    "name": "Speaker",
+    "cu": 1,
+    "lb": 10,
+    "dots": [
+     [
+      7,
+      40
+     ]
+    ],
+    "label": [
+     12,
+     20
+    ]
+   },
+   {
+    "name": "Bookcase, small",
+    "cu": 8,
+    "lb": 56,
+    "dots": [
+     [
+      6,
+      48
+     ]
+    ],
+    "label": [
+     13,
+     30
+    ]
+   },
+   {
+    "name": "Globe (fragile)",
+    "cu": 3,
+    "lb": 10,
+    "dots": [
+     [
+      34,
+      70
+     ]
+    ],
+    "label": [
+     31,
+     62
+    ]
+   },
+   {
+    "name": "Steamer trunk",
+    "cu": 12,
+    "lb": 84,
+    "dots": [
+     [
+      35,
+      85
+     ]
+    ],
+    "label": [
+     30,
+     95
+    ]
+   },
+   {
+    "name": "Accent chair",
+    "cu": 12,
+    "lb": 84,
+    "dots": [
+     [
+      52,
+      56
+     ]
+    ],
+    "label": [
+     50,
+     47
+    ]
+   },
+   {
+    "name": "Floor plants ×2",
+    "cu": 10,
+    "lb": 60,
+    "dots": [
+     [
+      43,
+      45
+     ],
+     [
+      66,
+      58
+     ]
+    ],
+    "label": [
+     70,
+     34
+    ]
+   },
+   {
+    "name": "Area rug",
+    "cu": 3,
+    "lb": 21,
+    "dots": [
+     [
+      60,
+      85
+     ]
+    ],
+    "label": [
+     68,
+     80
+    ]
+   },
+   {
+    "name": "Wall hanging",
+    "cu": 2,
+    "lb": 10,
+    "dots": [
+     [
+      89,
+      40
+     ]
+    ],
+    "label": [
+     88,
+     28
+    ]
+   }
+  ]
+ }
+}

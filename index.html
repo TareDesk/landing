@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TareDesk — AI moving surveys</title>
+    <meta name="description" content="Survey the whole house from a few photos. TareDesk tags every item, weighs it against your cube sheet, and gets customer sign-off." />
+    <script>
+      // Set the theme before first paint so dark mode doesn't flash white.
+      try {
+        var q = new URLSearchParams(location.search).get('theme');
+        var t = q || (JSON.parse(localStorage.getItem('taredesk-brand') || '{}').theme) || 'light';
+        var dark = t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
