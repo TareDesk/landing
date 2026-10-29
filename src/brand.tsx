@@ -1,44 +1,24 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { inkFor, normalizeHex } from './brand-colors';
 
 export type Theme = 'light' | 'dark' | 'system';
 export type Brand = { color: string; mover: string; theme: Theme };
 
-export const PRESETS: { label: string; color: string }[] = [
-  { label: 'Tomato', color: '#ff4d2e' },
-  { label: 'Box tape', color: '#ffc21a' },
-  { label: 'Pine', color: '#1f8a4c' },
-  { label: 'Royal', color: '#3355ff' },
-  { label: 'Bubblegum', color: '#ff5fa2' },
-  { label: 'Grape', color: '#7a3cff' },
-];
-
-const DEFAULT: Brand = { color: '#ff4d2e', mover: 'Hartwell Moving Co.', theme: 'light' };
+const DEFAULT: Brand = { color: '#ff4d2e', mover: 'Your Moving Company', theme: 'light' };
 const THEMES: Theme[] = ['light', 'dark', 'system'];
 const asTheme = (v: unknown): Theme | null => (THEMES.includes(v as Theme) ? (v as Theme) : null);
 const KEY = 'taredesk-brand';
-const HEX = /^#[0-9a-f]{6}$/i;
-
-export function normalizeHex(v: string): string | null {
-  let s = v.trim().replace(/^#?/, '#');
-  if (/^#[0-9a-f]{3}$/i.test(s)) s = '#' + [...s.slice(1)].map(c => c + c).join('');
-  return HEX.test(s) ? s.toLowerCase() : null;
-}
-
-/** Dark ink on light brands, white ink on dark brands (WCAG relative luminance). */
-export function inkFor(hex: string): string {
-  const [r, g, b] = [1, 3, 5].map(i => {
-    const c = parseInt(hex.slice(i, i + 2), 16) / 255;
-    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
-  });
-  const L = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  return L > 0.4 ? '#0a0a0a' : '#ffffff';
-}
 
 function initial(): Brand {
   let saved: Partial<Brand> = {};
   try {
     const raw = JSON.parse(localStorage.getItem(KEY) || 'null');
-    if (raw) saved = { color: normalizeHex(raw.color || '') || undefined, mover: raw.mover ? String(raw.mover) : undefined, theme: asTheme(raw.theme) || undefined };
+    if (raw)
+      saved = {
+        color: normalizeHex(raw.color || '') || undefined,
+        mover: raw.mover ? String(raw.mover).slice(0, 32) : undefined,
+        theme: asTheme(raw.theme) || undefined,
+      };
   } catch {
     /* storage blocked */
   }
@@ -46,9 +26,14 @@ function initial(): Brand {
   try {
     const q = new URLSearchParams(window.location.search);
     const c = q.get('brand') && normalizeHex(q.get('brand')!);
-    const m = q.get('mover');
+    const m = q.get('mover')?.slice(0, 32);
     const t = asTheme(q.get('theme'));
-    if (c || m || t) return { color: c || saved.color || DEFAULT.color, mover: m || saved.mover || DEFAULT.mover, theme: t || saved.theme || DEFAULT.theme };
+    if (c || m || t)
+      return {
+        color: c || saved.color || DEFAULT.color,
+        mover: m || saved.mover || DEFAULT.mover,
+        theme: t || saved.theme || DEFAULT.theme,
+      };
   } catch {
     /* ignore */
   }
@@ -111,9 +96,9 @@ export function BrandProvider({ children }: { children: ReactNode }) {
       ...brand,
       ink,
       dark,
-      setTheme: t => setBrand(b => ({ ...b, theme: t })),
-      setColor: c => setBrand(b => ({ ...b, color: c })),
-      setMover: m => setBrand(b => ({ ...b, mover: m })),
+      setTheme: (t) => setBrand((b) => ({ ...b, theme: t })),
+      setColor: (c) => setBrand((b) => ({ ...b, color: c })),
+      setMover: (m) => setBrand((b) => ({ ...b, mover: m })),
       reset: () => setBrand(DEFAULT),
       shareUrl: () => {
         const u = new URL(window.location.href);

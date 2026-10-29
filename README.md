@@ -1,21 +1,33 @@
 # TareDesk landing page
 
-Vite + React + Tailwind v4. Animated bits from [React Bits](https://reactbits.dev) live in `src/components/reactbits/`.
+Vite + React + Tailwind v4. The page includes a photo-tag toggle, editable sample
+inventory, catalog comparison, company-brand preview, and a pausable CSS item ticker.
 
 ```bash
 npm install
 npm run dev      # http://localhost:5173
 npm run build    # static site in dist/ (deploy to Vercel/Netlify as-is)
+npm test         # color validation and foreground-contrast checks
+npm run lint
 ```
 
 ## The brand color
-One editable color (`--brand`) drives every streak, sticker dot, toggle, the scroll bar, click sparks and the customer-link previews.
-- Default lives in `src/brand.tsx` (`DEFAULT`) and `src/index.css` (`:root --brand`).
-- Visitors change it with the floating **Brand color** button. The choice is saved in localStorage.
+One editable color (`--brand`) drives the squiggly underlines, item tags, toggle,
+and customer-report previews. Foreground text is chosen for contrast.
+- Default lives in `src/brand.tsx` (`DEFAULT`) and `src/index.css` (`:root --brand`); presets and color helpers are in `src/brand-colors.ts`.
+- Visitors enter their company name and color with the floating **Try your brand** button. Choices are saved in localStorage. Appearance controls are secondary.
 - Sales link in a prospect's colors: `/?brand=1f8a4c&mover=Pine%20Movers` (add `&theme=dark` for dark mode).
 
-Every other color comes from the TareDesk app palette (shadcn neutral plus red/amber/sky status pills) in `src/index.css`.
+The other colors use the TareDesk app’s neutral palette in `src/index.css`.
 
 ## Content
+- The laptop/tablet visual in `public/images/photos-and-inventory.webp` is exported
+  from the [approved Canva composition](https://www.canva.com/design/DAHYrFFdnLA/D0_PXZYCEwo-vj-uHTufgg/edit).
+  Update that design and re-export to revise the static visual.
 - Room photos: `public/rooms/` (Unsplash, credits in the footer). Sticker positions: `src/rooms.json`, exported from `../promo/stickerize.py`.
-- Demo booking: Conor's CalendarBridge page is embedded on screens 1280px and wider; smaller screens get a button that opens it in a new tab (`BOOKING_URL` in `src/sections/More.tsx`).
+- Demo booking: the button opens Conor's CalendarBridge page in a new tab (`BOOKING_URL` in `src/sections/More.tsx`). No booking or signup is submitted by this site.
+- Reports, catalog values, messages, and approval states are illustrative. The hero,
+  sample report, and initial review table use the same family-room inventory.
+- The page describes staff-led capture and customer review; it does not offer
+  unguided self-survey, estimating, or e-signature. Guided video remains labeled
+  as in testing. Current CTA: book a demo, with no beta enrollment or price lock.
