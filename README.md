@@ -21,6 +21,14 @@ and customer-report previews. Foreground text is chosen for contrast.
 The other colors use the TareDesk app’s neutral palette in `src/index.css`.
 
 ## Content
+
+- SMS program, terms and privacy pages live at `/sms`, `/sms/terms` and
+  `/sms/privacy` (`src/SmsPages.tsx`). They describe Conor-operated TareDesk Demo
+  messaging, using recorded verbal consent. Booking alone is not SMS consent.
+  These pages do not provide a consent-collection backend or activate texting.
+- `vercel.json` routes direct requests for those pages to the Vite app. If using
+  another host, configure the equivalent rewrites. Publishing and domain/DNS
+  changes require Conor's approval; local edits do not submit a Twilio application.
 - The laptop/tablet visual in `public/images/photos-and-inventory.webp` is exported
   from the [approved Canva composition](https://www.canva.com/design/DAHYrFFdnLA/D0_PXZYCEwo-vj-uHTufgg/edit).
   Update that design and re-export to revise the static visual.

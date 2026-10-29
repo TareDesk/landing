@@ -3,6 +3,7 @@ import { BrandProvider } from './brand';
 import { Logo } from './Logo';
 import { Hero } from './sections/Hero';
 import { HowItWorks } from './sections/HowItWorks';
+import { SmsLinks, SmsPage } from './SmsPages';
 import { BrandSection, Catalog, Demo, Faq, Marquee, Problems } from './sections/More';
 
 function Nav() {
@@ -44,6 +45,8 @@ function Footer() {
         <div>
           <Logo className="mb-2 h-6 text-ink" />
           <p className="mt-1 max-w-sm">Development preview. Contact Conor for current availability.</p>
+          <p className="mt-2">TareDesk is operated by Conor Doyle.</p>
+          <SmsLinks />
         </div>
         <div className="max-w-md sm:text-right">
           <p>Room photos: Clay Banks, Christina Radevich, Mạnh Ngô, Colin + Meg, Timothy Buck on Unsplash.</p>
@@ -55,6 +58,11 @@ function Footer() {
 }
 
 export default function App() {
+  const path = window.location.pathname.replace(/\/+$/, '');
+  if (path === '/sms' || path === '/sms/terms' || path === '/sms/privacy') {
+    return <BrandProvider><SmsPage path={path} /></BrandProvider>;
+  }
+
   return (
     <BrandProvider>
       <a href="#main" className="sr-only fixed top-2 left-2 z-[60] rounded-lg bg-primary px-4 py-3 text-primary-fg focus:not-sr-only">
