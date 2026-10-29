@@ -1,6 +1,7 @@
 import { BrandPanel } from './BrandPanel';
 import { BrandProvider } from './brand';
 import { Logo } from './Logo';
+import { DemoPage } from './DemoPages';
 import { Hero } from './sections/Hero';
 import { HowItWorks } from './sections/HowItWorks';
 import { SmsLinks, SmsPage } from './SmsPages';
@@ -59,6 +60,9 @@ function Footer() {
 
 export default function App() {
   const path = window.location.pathname.replace(/\/+$/, '');
+  if (path === '/j/sample' || path === '/r/sample') {
+    return <BrandProvider><DemoPage path={path} /></BrandProvider>;
+  }
   if (path === '/sms' || path === '/sms/terms' || path === '/sms/privacy') {
     return <BrandProvider><SmsPage path={path} /></BrandProvider>;
   }

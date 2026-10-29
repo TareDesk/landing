@@ -3,13 +3,13 @@ import rooms from './rooms.json';
 import { RoomPhoto, roomTotals } from './RoomPhoto';
 import { fmt, Pill } from './ui';
 
-export function ReportPreview({ compact = false }: { compact?: boolean }) {
+export function ReportPreview({ compact = false, companyName }: { compact?: boolean; companyName?: string }) {
   const { mover, color, ink } = useBrand();
   const totals = roomTotals('m13');
   return (
     <div className="overflow-hidden rounded-2xl border border-line bg-card text-ink">
       <div className="px-5 py-4" style={{ background: color, color: ink }}>
-        <div className="text-sm font-medium break-words">{mover || 'Your moving company'}</div>
+        <div className="text-sm font-medium break-words">{companyName || mover || 'Your moving company'}</div>
         <div className="mt-1 text-xl font-semibold tracking-tight">Moving inventory</div>
       </div>
       <div className="p-4 sm:p-5">

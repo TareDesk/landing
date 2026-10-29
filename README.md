@@ -22,6 +22,11 @@ The other colors use the TareDesk app’s neutral palette in `src/index.css`.
 
 ## Content
 
+- Public sample SMS destinations are `/j/sample` (illustrative video invitation,
+  no active call or camera access) and `/r/sample` (existing illustrative report).
+  They share the landing deployment, including on `reports.taredesk.com`; they
+  use no customer records, database, consent collection, or messaging backend.
+
 - SMS program, terms and privacy pages live at `/sms`, `/sms/terms` and
   `/sms/privacy` (`src/SmsPages.tsx`). They describe Conor-operated TareDesk Demo
   messaging, using recorded verbal consent. Booking alone is not SMS consent.

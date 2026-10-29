@@ -1,5 +1,7 @@
 {
   "rewrites": [
+    { "source": "/j/sample", "destination": "/index.html" },
+    { "source": "/r/sample", "destination": "/index.html" },
     { "source": "/sms", "destination": "/index.html" },
     { "source": "/sms/terms", "destination": "/index.html" },
     { "source": "/sms/privacy", "destination": "/index.html" }
