@@ -22,12 +22,16 @@ pdfmetrics.registerFont(TTFont("Evidence", str(font_dir / "Vera.ttf")))
 pdfmetrics.registerFont(TTFont("EvidenceBold", str(font_dir / "VeraBd.ttf")))
 
 SCRIPT = (
-    "May I text this number about your requested TareDesk software demonstration, "
-    "including the video invitation, demonstration report and related conversation? "
+    "May I send you texts from TareDesk Demo at this number while we demonstrate "
+    "the normal moving-survey workflow? These include survey appointment scheduling, "
+    "changes, cancellations and reminders; video-survey links; inventory review and "
+    "approval requests; submission receipts and review outcomes; and replies to your "
+    "questions. These are demonstration surveys, not an actual move. "
     "Message frequency varies. Message and data rates may apply. Reply STOP to opt "
     "out or HELP for help. Texting is optional and is not a condition of purchase; "
-    "we can use email or shared links instead. The SMS terms and privacy policy are "
-    "available on the TareDesk website. Is that okay?"
+    "we can use email or shared links instead. The SMS terms are at "
+    "www.taredesk.com/sms/terms and the privacy policy is at "
+    "www.taredesk.com/sms/privacy. May I text you at this number?"
 )
 
 # Keep the evidence aligned with the actual published program's source text.
@@ -35,12 +39,12 @@ source = (ROOT / "src/SmsPages.tsx").read_text()
 assert SCRIPT in source, "Consent script differs from the program page."
 
 body = ParagraphStyle(
-    "Body", fontName="Evidence", fontSize=10.5, leading=15,
-    textColor=colors.HexColor("#303030"), spaceAfter=9, alignment=TA_LEFT,
+    "Body", fontName="Evidence", fontSize=10.5, leading=13.5,
+    textColor=colors.HexColor("#303030"), spaceAfter=6, alignment=TA_LEFT,
 )
 heading = ParagraphStyle(
     "Heading", parent=body, fontName="EvidenceBold", fontSize=12,
-    leading=16, textColor=colors.HexColor("#101010"), spaceBefore=12,
+    leading=16, textColor=colors.HexColor("#101010"), spaceBefore=9,
     spaceAfter=6,
 )
 title = ParagraphStyle(
@@ -48,8 +52,8 @@ title = ParagraphStyle(
     spaceBefore=0, spaceAfter=10,
 )
 script_style = ParagraphStyle(
-    "Script", parent=body, fontSize=11, leading=16,
-    leftIndent=12, rightIndent=12, spaceBefore=8, spaceAfter=12,
+    "Script", parent=body, fontSize=11, leading=14.5,
+    leftIndent=12, rightIndent=12, spaceBefore=6, spaceAfter=9,
 )
 
 story = [
@@ -58,17 +62,24 @@ story = [
     Paragraph(
         "Operator: Conor Doyle<br/>"
         "Support: conor@merrimackdata.com<br/>"
-        "Disclosure version: October 28, 2026", body,
+        "Disclosure version: November 5, 2026", body,
     ),
     Paragraph("Who opts in", heading),
     Paragraph(
-        "Participants requesting a TareDesk software demonstration consent to "
-        "demonstration coordination, video invitations, demonstration report "
-        "links and related two-way conversation. Conor obtains permission "
+        "Prospective customers experience the normal moving-survey workflow in "
+        "Conor-operated demonstrations, using demo surveys rather than actual moves. "
+        "Consent covers appointments and reminders, video links, inventory review "
+        "and approval, submission receipts and review outcomes, and two-way support. "
+        "Conor obtains permission "
         "during a phone call or demonstration intake, before the first text.", body,
     ),
     Paragraph("Exact script read to the participant", heading),
     Paragraph(SCRIPT, script_style),
+    Paragraph(
+        'Illustrative exchange: Participant: "Yes." Conor: "You\'re enrolled in '
+        'TareDesk Demo survey-workflow texts. Reply STOP to opt out or HELP for help." '
+        'A "no" or no answer means no SMS.', body,
+    ),
     Paragraph("How the answer is recorded", heading),
     Paragraph(
         "Confirm the intended mobile number. Record consent only after an "
@@ -96,8 +107,8 @@ for label, url in [
 story.extend([
     Spacer(1, 5),
     Paragraph(
-        "This document explains the consent workflow. It contains no recipient "
-        "information and is not evidence of consent from a particular person.", body,
+        "This process document contains no recipient information or proof of "
+        "individual consent.", body,
     ),
 ])
 

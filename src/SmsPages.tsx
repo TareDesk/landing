@@ -31,15 +31,18 @@ function Program() {
         <p>Conor Doyle operates TareDesk, moving-survey software, and the TareDesk Demo text-message program. Messages identify TareDesk Demo as the sender.</p>
       </Section>
       <Section title="What we send">
-        <p>Messages support software demonstrations conducted by Conor: appointment coordination, video-survey invitations, demonstration inventory-report links, and individual replies to your questions. This program does not enroll you in unrelated promotional messaging.</p>
+        <p>During a demonstration conducted by Conor, you can experience the customer side of the normal moving-survey workflow. Messages use TareDesk Demo as the sender and include survey appointment scheduling, changes, cancellations and reminders; video-survey invitations and join links; inventory review and approval requests; submission receipts and review outcomes; and two-way replies to your questions.</p>
+        <p>These are demonstration surveys for prospective TareDesk customers. Independent moving companies do not use this number to conduct actual customer moves. This program does not enroll you in unrelated promotional messaging.</p>
       </Section>
       <Section title="How you opt in">
         <p>During a phone call or demonstration intake, Conor reads the following disclosure and asks for your permission before recording your number for texting:</p>
         <blockquote className="border-l border-line pl-5 text-ink">
-          May I text this number about your requested TareDesk software demonstration, including the video invitation, demonstration report and related conversation? Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Texting is optional and is not a condition of purchase; we can use email or shared links instead. The SMS terms and privacy policy are available on the TareDesk website. Is that okay?
+          May I send you texts from TareDesk Demo at this number while we demonstrate the normal moving-survey workflow? These include survey appointment scheduling, changes, cancellations and reminders; video-survey links; inventory review and approval requests; submission receipts and review outcomes; and replies to your questions. These are demonstration surveys, not an actual move. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Texting is optional and is not a condition of purchase; we can use email or shared links instead. The SMS terms are at www.taredesk.com/sms/terms and the privacy policy is at www.taredesk.com/sms/privacy. May I text you at this number?
         </blockquote>
         <p>Only an affirmative answer is recorded as consent, with your number, date, method, disclosure version and the person who obtained it. Providing a phone number or booking a demonstration alone does not enroll you.</p>
+        <p>After you agree, Conor confirms verbally: “You’re enrolled in TareDesk Demo survey-workflow texts. Reply STOP to opt out or HELP for help.”</p>
         <p>Read the <a href="/sms/terms" className="underline underline-offset-4">SMS terms</a> and <a href="/sms/privacy" className="underline underline-offset-4">privacy policy</a>. Texting is optional; you can use email and shared links.</p>
+        <p><a href="/sms/verbal-consent.pdf" className="underline underline-offset-4">Download the verbal consent process and disclosure (PDF)</a>.</p>
       </Section>
       <Section title="Frequency and cost">
         <p>Message frequency varies with your requested demonstration and conversation. Message and data rates may apply.</p>
@@ -56,7 +59,8 @@ function Terms() {
   return (
     <>
       <Section title="The program">
-        <p>TareDesk is moving-survey software operated by Conor Doyle. TareDesk Demo supports software demonstrations conducted by Conor. Messages include demonstration appointment coordination, video-survey invitations, demonstration inventory-report links, and individual replies to participants’ questions.</p>
+        <p>TareDesk is moving-survey software operated by Conor Doyle. TareDesk Demo lets prospective customers experience the customer side of the normal moving-survey workflow in demonstrations conducted by Conor. Messages include survey appointment scheduling, changes, cancellations and reminders; video-survey invitations and join links; inventory review and approval requests; submission receipts and review outcomes; and two-way support replies.</p>
+        <p>These surveys are demonstrations, not actual customer moves. Independent moving companies do not use this number to message their customers.</p>
         <p>Messages identify TareDesk Demo as the sender. This program is for requested demonstrations and related conversations; it does not enroll participants in unrelated promotional messaging.</p>
       </Section>
       <Section title="Your consent">
@@ -97,18 +101,19 @@ function Privacy() {
         </ul>
       </Section>
       <Section title="How we use information">
-        <p>We use information to arrange and conduct your requested demonstration, send invitation and report links, respond to messages, produce draft inventories, support the service, maintain security and perform necessary operations.</p>
+        <p>We use information to demonstrate the normal moving-survey workflow: arrange appointments and send changes, cancellations and reminders; provide video-survey and inventory links; process review, approval and proposed changes; send submission receipts and review outcomes; and respond to messages. We also use information to produce draft inventories, support the service, maintain security and perform necessary operations.</p>
         <p>We do not sell this information or use homeowner photos, audio or transcripts to train TareDesk models. AI-generated inventories are drafts for human review.</p>
       </Section>
       <Section title="Photos, AI processing and recording">
         <p>Photos may be processed by our AI provider to create a draft inventory. We explain recording before it starts and require affirmative permission from every participant. Recording remains off without that permission. Consent records identify the disclosure, time and relevant person or session. Contact the operator if you want recording stopped.</p>
       </Section>
       <Section title="Providers and sharing">
-        <p>We use these service providers for the relevant functions:</p>
+        <p>Depending on the features used in your demonstration, service providers include:</p>
         <ul className="list-disc space-y-2 pl-5">
           <li><strong className="text-ink">Twilio:</strong> text-message delivery and inbound replies.</li>
           <li><strong className="text-ink">Resend:</strong> email delivery.</li>
           <li><strong className="text-ink">Daily:</strong> video calls and enabled recording.</li>
+          <li><strong className="text-ink">Amazon Web Services:</strong> storage of enabled audio and video recordings.</li>
           <li><strong className="text-ink">Anthropic:</strong> AI processing of survey content to draft inventories.</li>
           <li><strong className="text-ink">Supabase:</strong> authentication, database and file storage.</li>
           <li><strong className="text-ink">Vercel:</strong> application hosting.</li>
@@ -117,7 +122,8 @@ function Privacy() {
         <p>We do not share mobile information with third parties or affiliates for marketing or promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information won’t be shared with any third parties. Service providers process the information needed to deliver messages on our behalf; this does not authorize use for their own marketing.</p>
       </Section>
       <Section title="Retention and deletion">
-        <p>We retain survey media, inventories, reports, messages and associated audit records to deliver and support the service and maintain the related records. The current platform does not automatically expire and permanently delete survey media on a fixed schedule. Removing a photo from a survey hides it from the active inventory but does not itself permanently erase its stored file or audit history.</p>
+        <p>We retain survey photos, inventories, reports, messages and associated audit records to deliver and support the demonstration and maintain the related records. Removing a photo from a survey hides it from the active inventory but does not itself permanently erase its stored file or audit history.</p>
+        <p>When recording is offered, we explain its retention period before obtaining your permission. You can participate without agreeing to recording. Recording retention is separate from retention of photos, inventory, transcripts and audit records.</p>
         <p>Contact <Contact /> to request access, correction or deletion. We handle requests individually, subject to records needed for security, legal obligations or unresolved claims. Opt-out records are retained as needed to honor your choice. Backups and providers may retain copies for their applicable retention periods.</p>
       </Section>
       <Section title="Security and your choices">
@@ -147,7 +153,7 @@ export function SmsPage({ path }: { path: string }) {
       </header>
       <main id="main" className="mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-16">
         <h1 className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">{title}</h1>
-        <p className="mt-4 text-sm leading-relaxed text-muted-fg">TareDesk Demo · Operated by Conor Doyle<br />Last updated October 28, 2026</p>
+        <p className="mt-4 text-sm leading-relaxed text-muted-fg">TareDesk Demo · Operated by Conor Doyle<br />Last updated November 5, 2026</p>
         <div className="mt-6 border-b border-line pb-4 text-sm"><SmsLinks /></div>
         <div className="mt-10 space-y-10 text-base leading-7 text-muted-fg">
           {path === '/sms/terms' ? <Terms /> : path === '/sms/privacy' ? <Privacy /> : <Program />}

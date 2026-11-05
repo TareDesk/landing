@@ -22,7 +22,8 @@ The other colors use the TareDesk app’s neutral palette in `src/index.css`.
 
 ## Content
 
-- Public sample SMS destinations are `/j/sample` (illustrative video invitation,
+- Public sample SMS destinations are `/s/sample` (illustrative appointment),
+  `/j/sample` (illustrative video invitation,
   no active call or camera access) and `/r/sample` (existing illustrative report).
   They share the landing deployment, including on `reports.taredesk.com`; they
   use no customer records, database, consent collection, or messaging backend.
@@ -31,6 +32,13 @@ The other colors use the TareDesk app’s neutral palette in `src/index.css`.
   `/sms/privacy` (`src/SmsPages.tsx`). They describe Conor-operated TareDesk Demo
   messaging, using recorded verbal consent. Booking alone is not SMS consent.
   These pages do not provide a consent-collection backend or activate texting.
+  The November 5, 2026 disclosure covers the normal survey workflow: appointment
+  scheduling/changes/cancellations/reminders, video invitations, inventory
+  review/approval, submission receipts/outcomes, and two-way replies. Messages
+  retain normal wording with the TareDesk Demo sender identity. Conor operates
+  the demos for prospects; this sender is not for independent movers' real jobs.
+  The privacy page distinguishes recording retention from other survey data;
+  explain the actual recording retention before offering a recorded demo.
 - `vercel.json` routes direct requests for those pages to the Vite app. If using
   another host, configure the equivalent rewrites. Publishing and domain/DNS
   changes require Conor's approval; local edits do not submit a Twilio application.
@@ -39,6 +47,9 @@ The other colors use the TareDesk app’s neutral palette in `src/index.css`.
   `pypdf`); the script checks the consent wording against `src/SmsPages.tsx` and
   writes both the local review copy and the public PDF. The document describes
   the process and contains no recipient data or individual consent records.
+  Record an affirmative answer, mobile number, timestamp, verbal method,
+  disclosure version and operator before sending. The PDF and pages are evidence
+  of that process, not a claim that the landing site stores consent or sends SMS.
 - The laptop/tablet visual in `public/images/photos-and-inventory.webp` is exported
   from the [approved Canva composition](https://www.canva.com/design/DAHYrFFdnLA/D0_PXZYCEwo-vj-uHTufgg/edit).
   Update that design and re-export to revise the static visual.

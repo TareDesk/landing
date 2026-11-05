@@ -60,7 +60,7 @@ function Footer() {
 
 export default function App() {
   const path = window.location.pathname.replace(/\/+$/, '');
-  if (path === '/j/sample' || path === '/r/sample') {
+  if (path === '/s/sample' || path === '/j/sample' || path === '/r/sample') {
     return <BrandProvider><DemoPage path={path} /></BrandProvider>;
   }
   if (path === '/sms' || path === '/sms/terms' || path === '/sms/privacy') {
