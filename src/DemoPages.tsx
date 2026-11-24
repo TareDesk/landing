@@ -10,7 +10,7 @@ export function DemoPage({ path }: { path: string }) {
 
   useEffect(() => {
     document.title = `${title} — TareDesk Demo`;
-    document.querySelector('meta[name="description"]')?.setAttribute('content', `${title} with illustrative data. TareDesk is operated by Conor Doyle.`);
+    document.querySelector('meta[name="description"]')?.setAttribute('content', `${title} with illustrative data. TareDesk is operated by Conor Doyle, doing business as TareDesk.`);
   }, [title]);
 
   return (
@@ -61,7 +61,7 @@ export function DemoPage({ path }: { path: string }) {
       </main>
       <footer className="border-t border-line">
         <div className="mx-auto max-w-3xl space-y-3 px-5 py-8 text-sm leading-relaxed text-muted-fg sm:px-8">
-          <p>TareDesk is operated by Conor Doyle. <a href="mailto:conor@merrimackdata.com" className="underline underline-offset-4">conor@merrimackdata.com</a></p>
+          <p>TareDesk is operated by Conor Doyle, doing business as TareDesk. <a href="mailto:conor@merrimackdata.com" className="underline underline-offset-4">conor@merrimackdata.com</a></p>
           <SmsLinks />
           <p>Room photos: Clay Banks, Christina Radevich, Mạnh Ngô, Colin + Meg, Timothy Buck on Unsplash.</p>
         </div>

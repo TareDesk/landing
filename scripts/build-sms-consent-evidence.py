@@ -1,7 +1,7 @@
-"""Build the public, non-personal verbal-consent evidence document."""
+"""Build a local review copy of the verbal SMS consent evidence."""
 
+import os
 from pathlib import Path
-from shutil import copyfile
 
 import reportlab
 from reportlab.lib import colors
@@ -15,7 +15,7 @@ from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "output/pdf/taredesk-demo-verbal-consent.pdf"
+OUTPUT = Path(os.environ.get("SMS_EVIDENCE_OUTPUT", ROOT / "output/pdf/taredesk-demo-verbal-consent.pdf"))
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 font_dir = Path(reportlab.__file__).parent / "fonts"
 pdfmetrics.registerFont(TTFont("Evidence", str(font_dir / "Vera.ttf")))
@@ -60,9 +60,9 @@ story = [
     Paragraph("TareDesk Demo", title),
     Paragraph("Verbal SMS consent process", heading),
     Paragraph(
-        "Operator: Conor Doyle<br/>"
+        "Operator: Conor Doyle, doing business as TareDesk<br/>"
         "Support: conor@merrimackdata.com<br/>"
-        "Disclosure version: November 5, 2026", body,
+        "Disclosure version: November 5, 2026; document updated November 9, 2026", body,
     ),
     Paragraph("Who opts in", heading),
     Paragraph(
@@ -91,7 +91,7 @@ story = [
     Paragraph("Opt out and resubscribe", heading),
     Paragraph(
         "STOP suppresses further program messages, apart from the opt-out "
-        "confirmation. Toll-free resubscription uses START or UNSTOP. HELP "
+        "confirmation. Reply START to resubscribe. HELP "
         "provides support and does not resubscribe a recipient. Consent and "
         "provider suppression controls must both permit sending.", body,
     ),
@@ -122,11 +122,8 @@ SimpleDocTemplate(
 reader = PdfReader(OUTPUT)
 assert len(reader.pages) == 1, "Consent evidence must fit on one readable page."
 text = " ".join(" ".join(page.extract_text() for page in reader.pages).split())
-for required in ["TareDesk Demo", "Conor Doyle", "STOP", "HELP", "START", "UNSTOP",
+for required in ["TareDesk Demo", "Conor Doyle", "STOP", "HELP", "START",
                  "Message and data rates may apply", "https://www.taredesk.com/sms/terms",
                  "https://www.taredesk.com/sms/privacy", "disclosure version"]:
     assert required in text, f"Missing evidence element: {required}"
-public_copy = ROOT / "public/sms/verbal-consent.pdf"
-public_copy.parent.mkdir(parents=True, exist_ok=True)
-copyfile(OUTPUT, public_copy)
 print(OUTPUT)
