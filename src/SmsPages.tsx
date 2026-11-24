@@ -28,7 +28,7 @@ function Program() {
   return (
     <>
       <Section title="Who sends these messages">
-        <p>Conor Doyle operates TareDesk, moving-survey software, and the TareDesk Demo text-message program. Messages identify TareDesk Demo as the sender.</p>
+        <p>Conor Doyle, doing business as TareDesk, operates moving-survey software and the TareDesk Demo text-message program. Messages identify TareDesk Demo as the sender.</p>
       </Section>
       <Section title="What we send">
         <p>During a demonstration conducted by Conor, you can experience the customer side of the normal moving-survey workflow. Messages use TareDesk Demo as the sender and include survey appointment scheduling, changes, cancellations and reminders; video-survey invitations and join links; inventory review and approval requests; submission receipts and review outcomes; and two-way replies to your questions.</p>
@@ -39,16 +39,16 @@ function Program() {
         <blockquote className="border-l border-line pl-5 text-ink">
           May I send you texts from TareDesk Demo at this number while we demonstrate the normal moving-survey workflow? These include survey appointment scheduling, changes, cancellations and reminders; video-survey links; inventory review and approval requests; submission receipts and review outcomes; and replies to your questions. These are demonstration surveys, not an actual move. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Texting is optional and is not a condition of purchase; we can use email or shared links instead. The SMS terms are at www.taredesk.com/sms/terms and the privacy policy is at www.taredesk.com/sms/privacy. May I text you at this number?
         </blockquote>
-        <p>Only an affirmative answer is recorded as consent, with your number, date, method, disclosure version and the person who obtained it. Providing a phone number or booking a demonstration alone does not enroll you.</p>
+        <p>Only an affirmative answer is recorded as consent, with your number, date and time, method, disclosure version and the person who obtained it. Providing a phone number or booking a demonstration alone does not enroll you.</p>
         <p>After you agree, Conor confirms verbally: “You’re enrolled in TareDesk Demo survey-workflow texts. Reply STOP to opt out or HELP for help.”</p>
         <p>Read the <a href="/sms/terms" className="underline underline-offset-4">SMS terms</a> and <a href="/sms/privacy" className="underline underline-offset-4">privacy policy</a>. Texting is optional; you can use email and shared links.</p>
-        <p><a href="/sms/verbal-consent.pdf" className="underline underline-offset-4">Download the verbal consent process and disclosure (PDF)</a>.</p>
+        <p>Illustrative exchange: after the disclosure above, the participant says “Yes.” Conor then gives the verbal confirmation above and records the affirmative answer. A “no” or no answer means no SMS; email and shared links remain available.</p>
       </Section>
       <Section title="Frequency and cost">
         <p>Message frequency varies with your requested demonstration and conversation. Message and data rates may apply.</p>
       </Section>
       <Section title="Opt out and get help">
-        <p>Reply <strong className="text-ink">STOP</strong> to unsubscribe or <strong className="text-ink">HELP</strong> for support. You may receive one opt-out confirmation, after which no further program messages will be sent unless you opt in again. For toll-free messaging, reply <strong className="text-ink">START</strong> or <strong className="text-ink">UNSTOP</strong> to resubscribe.</p>
+        <p>Reply <strong className="text-ink">STOP</strong> to unsubscribe or <strong className="text-ink">HELP</strong> for support. You may receive one opt-out confirmation, after which no further program messages will be sent unless you opt in again. Reply <strong className="text-ink">START</strong> to resubscribe.</p>
         <p>You can also contact <Contact />. Wireless carriers are not liable for delayed or undelivered messages.</p>
       </Section>
     </>
@@ -58,8 +58,8 @@ function Program() {
 function Terms() {
   return (
     <>
-      <Section title="The program">
-        <p>TareDesk is moving-survey software operated by Conor Doyle. TareDesk Demo lets prospective customers experience the customer side of the normal moving-survey workflow in demonstrations conducted by Conor. Messages include survey appointment scheduling, changes, cancellations and reminders; video-survey invitations and join links; inventory review and approval requests; submission receipts and review outcomes; and two-way support replies.</p>
+      <Section title="SMS Terms">
+        <p>TareDesk is moving-survey software operated by Conor Doyle, doing business as TareDesk. TareDesk Demo lets prospective customers experience the customer side of the normal moving-survey workflow in demonstrations conducted by Conor. Messages include survey appointment scheduling, changes, cancellations and reminders; video-survey invitations and join links; inventory review and approval requests; submission receipts and review outcomes; and two-way support replies.</p>
         <p>These surveys are demonstrations, not actual customer moves. Independent moving companies do not use this number to message their customers.</p>
         <p>Messages identify TareDesk Demo as the sender. This program is for requested demonstrations and related conversations; it does not enroll participants in unrelated promotional messaging.</p>
       </Section>
@@ -72,7 +72,7 @@ function Terms() {
       </Section>
       <Section title="Opt out and resubscribe">
         <p>Reply <strong className="text-ink">STOP</strong> to unsubscribe. You may receive a final confirmation of your opt-out, after which no further program messages will be sent unless you opt in again. You may also request removal by emailing <Contact />.</p>
-        <p>For toll-free messaging, reply <strong className="text-ink">START</strong> or <strong className="text-ink">UNSTOP</strong> to resubscribe. Replying HELP does not resubscribe you.</p>
+        <p>Reply <strong className="text-ink">START</strong> to resubscribe. Replying HELP does not resubscribe you.</p>
       </Section>
       <Section title="Help and delivery">
         <p>Reply <strong className="text-ink">HELP</strong> for support information or email <Contact />. Support hours are Monday through Friday, 9 a.m. to 5 p.m. Eastern, excluding holidays. The initial response is normally by the next business day; resolution time depends on the issue.</p>
@@ -90,7 +90,7 @@ function Privacy() {
   return (
     <>
       <Section title="Scope and operator">
-        <p>Conor Doyle operates TareDesk and the TareDesk Demo program. This policy covers information used for requested software demonstrations and associated communications. Contact <Contact /> with privacy requests.</p>
+        <p>Conor Doyle, doing business as TareDesk, operates the TareDesk Demo program. This policy covers information used for requested software demonstrations and associated communications. Contact <Contact /> with privacy requests.</p>
       </Section>
       <Section title="Information we collect">
         <p>Depending on the parts of the software demonstrated, we collect:</p>
@@ -119,7 +119,8 @@ function Privacy() {
           <li><strong className="text-ink">Vercel:</strong> application hosting.</li>
         </ul>
         <p>Information is processed by the providers needed to deliver the relevant function. We may also disclose information when required by law. Provider retention and legally required preservation may continue separately from removal within TareDesk; we do not promise immediate erasure of every provider copy.</p>
-        <p>We do not share mobile information with third parties or affiliates for marketing or promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information won’t be shared with any third parties. Service providers process the information needed to deliver messages on our behalf; this does not authorize use for their own marketing.</p>
+        <p>We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.</p>
+        <p>We do not share mobile information or text messaging opt-in data and consent with third parties or affiliates for marketing or promotional purposes. Service providers process the information needed to deliver messages on our behalf; this does not authorize use for their own marketing.</p>
       </Section>
       <Section title="Retention and deletion">
         <p>We retain survey photos, inventories, reports, messages and associated audit records to deliver and support the demonstration and maintain the related records. Removing a photo from a survey hides it from the active inventory but does not itself permanently erase its stored file or audit history.</p>
@@ -135,7 +136,7 @@ function Privacy() {
 }
 
 export function SmsPage({ path }: { path: string }) {
-  const title = path === '/sms/terms' ? 'SMS terms and conditions' : path === '/sms/privacy' ? 'Privacy policy' : 'TareDesk Demo SMS';
+  const title = path === '/sms/terms' ? 'Terms & Conditions' : path === '/sms/privacy' ? 'Privacy policy' : 'TareDesk Demo SMS';
 
   useEffect(() => {
     document.title = `${title} — TareDesk`;
@@ -153,7 +154,7 @@ export function SmsPage({ path }: { path: string }) {
       </header>
       <main id="main" className="mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-16">
         <h1 className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">{title}</h1>
-        <p className="mt-4 text-sm leading-relaxed text-muted-fg">TareDesk Demo · Operated by Conor Doyle<br />Last updated November 5, 2026</p>
+        <p className="mt-4 text-sm leading-relaxed text-muted-fg">TareDesk Demo · Operated by Conor Doyle<br />Last updated November 9, 2026</p>
         <div className="mt-6 border-b border-line pb-4 text-sm"><SmsLinks /></div>
         <div className="mt-10 space-y-10 text-base leading-7 text-muted-fg">
           {path === '/sms/terms' ? <Terms /> : path === '/sms/privacy' ? <Privacy /> : <Program />}
@@ -161,7 +162,7 @@ export function SmsPage({ path }: { path: string }) {
       </main>
       <footer className="border-t border-line">
         <div className="mx-auto max-w-3xl space-y-3 px-5 py-8 text-sm leading-relaxed text-muted-fg sm:px-8">
-          <p>TareDesk is operated by Conor Doyle. <Contact /></p>
+          <p>TareDesk is operated by Conor Doyle, doing business as TareDesk. <Contact /></p>
           <SmsLinks />
         </div>
       </footer>

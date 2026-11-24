@@ -349,7 +349,7 @@ function SmsPhone() {
         <div aria-hidden className="mx-auto mb-2 h-1 w-28 rounded-full bg-[#202124]" />
       </div>
       <figcaption className="mt-5 text-center text-xs leading-relaxed text-muted-fg">
-        Illustrative iPhone Messages preview.
+        Illustrative moving-company preview. Conor-operated demo texts identify TareDesk Demo.
       </figcaption>
     </figure>
   );

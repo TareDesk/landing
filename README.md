@@ -42,14 +42,13 @@ The other colors use the TareDesk app’s neutral palette in `src/index.css`.
 - `vercel.json` routes direct requests for those pages to the Vite app. If using
   another host, configure the equivalent rewrites. Publishing and domain/DNS
   changes require Conor's approval; local edits do not submit a Twilio application.
-- Verbal-consent evidence is available at `/sms/verbal-consent.pdf`. Rebuild it
-  with `python3 scripts/build-sms-consent-evidence.py` (requires `reportlab` and
-  `pypdf`); the script checks the consent wording against `src/SmsPages.tsx` and
-  writes both the local review copy and the public PDF. The document describes
-  the process and contains no recipient data or individual consent records.
-  Record an affirmative answer, mobile number, timestamp, verbal method,
-  disclosure version and operator before sending. The PDF and pages are evidence
-  of that process, not a claim that the landing site stores consent or sends SMS.
+- The public [SMS program page](https://www.taredesk.com/sms) documents the verbal
+  consent script, an illustrative exchange, recordkeeping and opt-out instructions.
+  The November 9 copy identifies the operator and uses number-neutral STOP/START
+  instructions. The disclosure version is November 5.
+- The historical public PDF remains at `/sms/verbal-consent.pdf`. To generate the
+  current local review copy, run `python3 scripts/build-sms-consent-evidence.py`
+  with `reportlab` and `pypdf` installed. The default output is under `output/pdf/`.
 - The laptop/tablet visual in `public/images/photos-and-inventory.webp` is exported
   from the [approved Canva composition](https://www.canva.com/design/DAHYrFFdnLA/D0_PXZYCEwo-vj-uHTufgg/edit).
   Update that design and re-export to revise the static visual.

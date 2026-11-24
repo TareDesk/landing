@@ -46,7 +46,7 @@ function Footer() {
         <div>
           <Logo className="mb-2 h-6 text-ink" />
           <p className="mt-1 max-w-sm">Development preview. Contact Conor for current availability.</p>
-          <p className="mt-2">TareDesk is operated by Conor Doyle.</p>
+          <p className="mt-2">TareDesk is operated by Conor Doyle, doing business as TareDesk.</p>
           <SmsLinks />
         </div>
         <div className="max-w-md sm:text-right">
